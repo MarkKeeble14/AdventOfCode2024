@@ -4,6 +4,7 @@
 public abstract class Executable : MonoBehaviour
 {
     [SerializeField] private bool executeOnAwake = true;
+    [SerializeField] protected bool print = false;
 
     private void Awake()
     {

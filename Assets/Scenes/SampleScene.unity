@@ -216,7 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309613728}
-  - component: {fileID: 1309613727}
+  - component: {fileID: 1309613729}
   m_Layer: 0
   m_Name: Execute
   m_TagString: Untagged
@@ -224,20 +224,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1309613727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309613726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991921c9be9733549a96ef2f119e755b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  executeOnAwake: 1
-  input: {fileID: 4900000, guid: bee856f48d7337e44ac042ef906a67e2, type: 3}
 --- !u!4 &1309613728
 Transform:
   m_ObjectHideFlags: 0
@@ -253,3 +239,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1309613729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309613726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fa9354acc379e4993d1bb1087da0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeOnAwake: 1
+  print: 0
+  input: {fileID: 4900000, guid: 6ec8e7fcd7542024896bf3a2c72537eb, type: 3}

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TotalDistanceBetweenLists : Executable
+public class Day1P1 : Executable
 {
     [SerializeField] private TextAsset input;
 
