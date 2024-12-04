@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Day2P2 : Executable
 {
-    [SerializeField] private TextAsset input;
-
     [ContextMenu("Execute")]
     protected override void Execute()
     {
@@ -34,17 +32,26 @@ public class Day2P2 : Executable
             {
                 savedByDampening = false;
 
+                if (print)
+                {
+                    Debug.Log("Bad Levels: " + line);
+                }
+
                 // try removing each level to see if doing so would remove the problem
                 for (int i = 0; i < levels.Count; i++)
                 {
                     List<int> newLevels = new List<int>();
                     newLevels.AddRange(levels);
-                    newLevels.Remove(levels[i]);
+                    newLevels.RemoveAt(i);
 
                     if (print)
                     {
-                        Debug.Log("Desparate Level");
-                        newLevels.ForEach(x => Debug.Log(x));
+                        string levelString = "Testing Level: ";
+                        foreach (var item in newLevels)
+                        {
+                            levelString += item + ", ";
+                        }
+                        Debug.Log(levelString);
                     }
 
                     problemIndex = CheckLevel(newLevels);
@@ -67,36 +74,29 @@ public class Day2P2 : Executable
     private int CheckLevel(List<int> levels)
     {
         int dif;
+        bool curAscending;
+        bool prevAscending = false;
 
         // Accounts for levels i through count - 1
-        for (int i = 0; i < levels.Count - 2; i++)
+        for (int i = 0; i < levels.Count - 1; i++)
         {
             dif = levels[i + 1] - levels[i];
-
-            if (levels[i + 2] - levels[i + 1] > 0
-                != levels[i + 1] - levels[i] > 0)
+            curAscending = dif > 0;
+            
+            if (i > 0)
             {
-                return i;
+                if (prevAscending != curAscending)
+                {
+                    return i;
+                }
             }
 
             if (Mathf.Abs(dif) > 3 || Mathf.Abs(dif) < 1)
             {
                 return i;
             }
-        }
 
-        // Accounts for final level
-        int index = levels.Count - 1;
-        if (levels[index - 2] - levels[index - 1] > 0
-            != levels[index - 1] - levels[index] > 0)
-        {
-            return index;
-        }
-
-        dif = levels[index - 1] - levels[index];
-        if (Mathf.Abs(dif) > 3 || Mathf.Abs(dif) < 1)
-        {
-            return index;
+            prevAscending = curAscending;
         }
 
         return -1;

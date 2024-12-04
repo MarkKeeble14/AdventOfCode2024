@@ -248,9 +248,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1309613726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67fa9354acc379e4993d1bb1087da0e4, type: 3}
+  m_Script: {fileID: 11500000, guid: a40dcac1297c4d94e998b9cb9c8820ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   executeOnAwake: 1
+  input: {fileID: 0}
   print: 0
-  input: {fileID: 4900000, guid: 6ec8e7fcd7542024896bf3a2c72537eb, type: 3}

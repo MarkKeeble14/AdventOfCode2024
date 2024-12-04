@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Day1P2 : Executable
 {
-    [SerializeField] private TextAsset input;
-
     [ContextMenu("Execute")]
     protected override void Execute()
     {

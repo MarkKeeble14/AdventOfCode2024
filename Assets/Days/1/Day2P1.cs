@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class Day2P1 : Executable
 {
-    [SerializeField] private TextAsset input;
-
     [ContextMenu("Execute")]
     protected override void Execute()
     {
