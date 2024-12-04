@@ -252,5 +252,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   executeOnAwake: 1
-  input: {fileID: 0}
+  input: {fileID: 4900000, guid: c87d60ca5e94f1d469cd8c4613ee4977, type: 3}
   print: 0
